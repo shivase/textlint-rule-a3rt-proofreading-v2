@@ -1,18 +1,16 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "target": "esnext",
-    "module": "CommonJS",
+    "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "lib": ["esnext"],
-    "types": ["node", "jest"],
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "dist"
+    "noEmit": true,
+    "target": "es2015",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "tests"],
+  "include": ["src", "test"],
   "exclude": ["node_modules"]
 }

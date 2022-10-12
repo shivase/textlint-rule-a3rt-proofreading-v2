@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "a3rt-proofreading-v2": {
+      "apiKey": "./test/fixtures/key.yaml"
+    }
+  }
+}
