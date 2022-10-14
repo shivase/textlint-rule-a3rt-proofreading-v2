@@ -1,9 +1,11 @@
 {
   "name": "textlint-rule-a3rt-proofreading-v2",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "lib/textlint-rule-a3rt-proofreading-v2.js",
   "description": "textlint rule to check Japanese with A3RT Proofreading API",
   "repository": "https://github.com/shivase/textlint-rule-a3rt-proofreading-v2",
+  "bugs": "https://github.com/shivase/textlint-rule-a3rt-proofreading-v2/issues",
+  "homepage": "https://github.com/shivase/textlint-rule-a3rt-proofreading-v2",
   "author": "shivase",
   "license": "MIT",
   "keywords": [
@@ -11,8 +13,20 @@
     "textlintrule",
     "a3rt"
   ],
-  "bugs": "https://github.com/shivase/textlint-rule-a3rt-proofreading-v2/issues",
-  "homepage": "https://github.com/shivase/textlint-rule-a3rt-proofreading-v2",
+  "scripts": {
+    "prepare": "husky install",
+    "prebuild": "rimraf lib",
+    "build": "NO_INLINE=true textlint-scripts build",
+    "lint": "run-s lint:*",
+    "lint:eslint": "eslint . --ext .ts --fix",
+    "lint:prettier": "prettier --write .",
+    "test": "NO_INLINE=true textlint-scripts test",
+    "prepublish": "yarn build"
+  },
+  "dependencies": {
+    "axios": "^1.1.2",
+    "js-yaml": "^4.1.0"
+  },
   "devDependencies": {
     "@types/chai": "^4.3.3",
     "@types/chai-as-promised": "^7.1.5",
@@ -21,7 +35,6 @@
     "@types/node": "^18.8.4",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
-    "axios": "^1.1.2",
     "chai": "^4.3.6",
     "chai-as-promised": "^7.1.1",
     "create-textlint-rule": "^1.5.0",
@@ -31,9 +44,7 @@
     "eslint-import-resolver-typescript": "^3.5.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "fs": "^0.0.1-security",
     "husky": "^8.0.1",
-    "js-yaml": "^4.1.0",
     "lint-staged": "^13.0.3",
     "mocha": "^10.0.0",
     "msw": "^0.47.4",
@@ -45,16 +56,6 @@
     "textlint-tester": "^12.2.2",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
-  },
-  "scripts": {
-    "prepare": "husky install",
-    "prebuild": "rimraf lib",
-    "build": "textlint-scripts build",
-    "lint": "run-s lint:*",
-    "lint:eslint": "eslint . --ext .ts --fix",
-    "lint:prettier": "prettier --write .",
-    "test": "mocha --require textlint-scripts/register-ts \"test/**/*.ts\"",
-    "prepublish": "npm run --if-present build"
   },
   "files": [
     "lib/",
@@ -68,6 +69,5 @@
       "prettier --write --loglevel=error",
       "eslint --fix"
     ]
-  },
-  "dependencies": {}
+  }
 }
