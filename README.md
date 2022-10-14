@@ -2,6 +2,10 @@
 # textlint-rule-a3rt-proofreading-v2 
 [![Actions Status: test](https://github.com/shivase/textlint-rule-a3rt-proofreading-v2/workflows/test/badge.svg)](https://github.com/shivase/textlint-rule-a3rt-proofreading-v2/actions?query=workflow%3A"test")
 
+リクルートの提供する文章校閲APIの、[Proofreading API](https://a3rt.recruit.co.jp/product/proofreadingAPI/)Iを使ったtextlintプラグインです。
+
+[textlint-rule-a3rt-proofreading](https://github.com/sters/textlint-rule-a3rt-proofreading)がドメインの変更などで動かなっていたので、新たに参考にさせていただいて作りました。
+
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
