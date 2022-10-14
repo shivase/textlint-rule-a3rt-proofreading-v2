@@ -2,11 +2,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import path from 'path';
 import { use, expect } from 'chai';
-import chaiAsPromised = require('chai-as-promised');
-
-// import { TextLintEngine, TextLintCore } from 'textlint';
+import chaiAsPromised from 'chai-as-promised';
 import { TextLintEngine } from 'textlint';
-// import rule from '../src/textlint-rule-a3rt-proofreading-v2';
 import { server } from './mocks/server';
 
 use(chaiAsPromised);
