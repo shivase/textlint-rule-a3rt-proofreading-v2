@@ -1,4 +1,5 @@
-# textlint-rule-a3rt-proofreading-v2
+
+# textlint-rule-a3rt-proofreading-v2 [![Actions Status: test](https://github.com/shivase/textlint-rule-a3rt-proofreading-v2/workflows/test/badge.svg)](https://github.com/shivase/textlint-rule-a3rt-proofreading-v2/actions?query=workflow%3A"test")
 
 ## Install
 
